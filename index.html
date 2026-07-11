@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSP Job Board — Hire MSP Technicians &amp; SOC/NOC Analysts</title>
+<meta name="description" content="Post an MSP technician, SOC/NOC analyst, or vCIO-adjacent role to the community where MSP hiring actually happens — for a flat $49-99, not a $3,950 placement fee.">
+<style>
+  :root { color-scheme: light; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; line-height: 1.55; color: #1a1a1a; }
+  h1 { font-size: 1.7rem; margin-bottom: 0.3em; }
+  .sub { color: #555; font-size: 1.05rem; margin-bottom: 1.6em; }
+  .cta { display: inline-block; background: #1a1a1a; color: #fff; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+  .cta:hover { background: #333; }
+  .price-note { color: #777; font-size: 0.9rem; margin-top: 10px; }
+  section { margin: 2.2em 0; }
+  h2 { font-size: 1.15rem; border-top: 1px solid #eee; padding-top: 1.4em; }
+  ul { padding-left: 1.2em; }
+  .badge { display: inline-block; background: #f0f0f0; border-radius: 4px; padding: 2px 8px; font-size: 0.8rem; color: #444; margin-bottom: 0.6em; }
+  footer { margin-top: 3em; font-size: 0.85rem; color: #888; }
+  label { display: block; font-size: 0.9rem; font-weight: 600; margin: 1em 0 0.3em; }
+  input, textarea { width: 100%; box-sizing: border-box; padding: 9px 10px; border: 1px solid #ccc; border-radius: 5px; font: inherit; }
+  .submit { margin-top: 1.2em; background: #1a1a1a; color: #fff; border: none; padding: 12px 22px; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; }
+  .submit:hover { background: #333; }
+</style>
+</head>
+<body>
+  <span class="badge">In beta — validating demand, not yet accepting live payment</span>
+  <h1>Hire your next MSP technician where MSP owners actually hang out.</h1>
+  <p class="sub">A flat $49-99 job listing, posted straight into the concentrated MSP hiring community — not a $3,950 upfront placement fee.</p>
+
+  <a class="cta" href="#interest-form">Tell us about the role you're hiring for →</a>
+  <p class="price-note">No account needed to submit. We'll follow up before anything is charged.</p>
+
+  <section>
+    <h2>Why MSP owners are done with the alternatives</h2>
+    <ul>
+      <li><strong>Generic boards (Indeed, Dice):</strong> flooded with candidates who don't know what a PSA or an RMM is. Poor signal-to-noise for MSP-specific roles.</li>
+      <li><strong>MSP Hire:</strong> the only MSP-specific option today — but it's full-service recruiting at $3,950 upfront, not a self-serve listing.</li>
+      <li><strong>Us:</strong> a flat $49-99 self-serve listing, seen by technicians and SOC/NOC analysts already active in the MSP community — not a general jobs feed.</li>
+    </ul>
+  </section>
+
+  <section id="interest-form">
+    <h2>Tell us what you're hiring for</h2>
+    <p>This beta form captures interest before checkout exists — we'll email you the moment listings go live, and early responders get their first listing free.</p>
+    <form action="https://formsubmit.co/atlasventuresnet@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New MSP Job Board interest signal">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <label for="company">Your company name</label>
+      <input type="text" id="company" name="Company" required>
+      <label for="role">Role you're hiring for</label>
+      <input type="text" id="role" name="Role" required placeholder="e.g. NOC Analyst, Field Technician, vCIO">
+      <label for="budget">Approximate budget for the listing</label>
+      <input type="text" id="budget" name="Budget" placeholder="e.g. $49-99">
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="Email" required>
+      <button class="submit" type="submit">Send interest →</button>
+    </form>
+  </section>
+
+  <footer>
+    MSP Job Board is an independent hiring board for the managed services industry. Not affiliated with any PSA, RMM, or vendor.
+  </footer>
+</body>
+</html>
