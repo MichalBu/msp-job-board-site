@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RAGDiag — Find out which part of your RAG pipeline is failing</title>
+<meta name="description" content="RAGDiag isolates which component of your RAG pipeline — chunking, embedding, retrieval, reranking, or query preprocessing — caused each wrong answer, and ranks the highest-impact fix." />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0B0F17] text-slate-200 antialiased">
+
+  <!-- Nav -->
+  <header class="border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-semibold text-white tracking-tight">RAG<span class="text-emerald-400">Diag</span></span>
+      <a href="#audit" class="text-sm bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-4 py-2 rounded-lg transition">Get a free audit</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
+    <span class="inline-block text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-6">Early access — onboarding first users now</span>
+    <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
+      Your RAG system gave the wrong answer. <span class="text-emerald-400">RAGDiag tells you which part broke.</span>
+    </h1>
+    <p class="text-lg text-slate-400 mt-6 max-w-2xl mx-auto">
+      For any query your retrieval-augmented pipeline got wrong, RAGDiag isolates which component
+      caused it — chunking, embedding, retrieval ranking, reranking, or query preprocessing — and
+      ranks the highest-impact fix. Instead of another aggregate quality score that tells you
+      <em>that</em> you have a problem but not <em>where</em> it is.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#audit" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">Request your free RAG failure audit</a>
+      <a href="#pricing" class="border border-white/15 hover:border-white/30 text-slate-200 font-medium px-6 py-3 rounded-lg transition">See pricing</a>
+    </div>
+    <p class="text-xs text-slate-500 mt-4">No credit card. We run the diagnostic on your top failure cases and send back a report.</p>
+  </section>
+
+  <!-- The problem (sourced) -->
+  <section class="max-w-5xl mx-auto px-6 py-12 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-2">Retrieval is where most RAG failures actually live</h2>
+    <p class="text-slate-400 text-center max-w-2xl mx-auto mb-10 text-sm">Industry research, not our own numbers — cited so you can check them.</p>
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="bg-white/5 rounded-xl p-6">
+        <div class="text-3xl font-bold text-emerald-400">~40%</div>
+        <p class="text-sm text-slate-300 mt-2">Naive RAG (fixed-size chunking + single-vector search) retrieves the wrong context roughly 40% of the time.</p>
+        <p class="text-xs text-slate-500 mt-3">Production RAG Guide 2026, mudassirkhan.me</p>
+      </div>
+      <div class="bg-white/5 rounded-xl p-6">
+        <div class="text-3xl font-bold text-emerald-400">~70%</div>
+        <p class="text-sm text-slate-300 mt-2">Roughly 70% of RAG failures trace back to retrieval problems — not the LLM's generation.</p>
+        <p class="text-xs text-slate-500 mt-3">2026 practitioner research</p>
+      </div>
+      <div class="bg-white/5 rounded-xl p-6">
+        <div class="text-3xl font-bold text-emerald-400">0 tools</div>
+        <p class="text-sm text-slate-300 mt-2">Engineers are writing step-by-step manual debugging playbooks — because no product isolates the cause for them.</p>
+        <p class="text-xs text-slate-500 mt-3">e.g. ChatRAG, BSWEN debugging guides, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="max-w-5xl mx-auto px-6 py-12 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-10">How the free audit works</h2>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div>
+        <div class="text-emerald-400 font-mono text-sm mb-2">01</div>
+        <h3 class="text-white font-semibold mb-1">Send us your failure set</h3>
+        <p class="text-sm text-slate-400">Share 20–50 queries your RAG system answered wrong, along with the context it retrieved. No production access needed.</p>
+      </div>
+      <div>
+        <div class="text-emerald-400 font-mono text-sm mb-2">02</div>
+        <h3 class="text-white font-semibold mb-1">We run counterfactual isolation</h3>
+        <p class="text-sm text-slate-400">We change one component at a time — chunking, embedding, retrieval, reranker, query preprocessing — to see which one, when fixed, actually recovers the right answer.</p>
+      </div>
+      <div>
+        <div class="text-emerald-400 font-mono text-sm mb-2">03</div>
+        <h3 class="text-white font-semibold mb-1">You get a ranked report</h3>
+        <p class="text-sm text-slate-400">Which component explains the most of your failures, ranked, with the single highest-impact fix to make first — not a vague "improve retrieval."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What it checks -->
+  <section class="max-w-5xl mx-auto px-6 py-12 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-8">The five components RAGDiag attributes failures to</h2>
+    <div class="grid sm:grid-cols-5 gap-3 text-center text-sm">
+      <div class="bg-white/5 rounded-lg p-4 text-slate-300">Chunking</div>
+      <div class="bg-white/5 rounded-lg p-4 text-slate-300">Embedding</div>
+      <div class="bg-white/5 rounded-lg p-4 text-slate-300">Retrieval ranking</div>
+      <div class="bg-white/5 rounded-lg p-4 text-slate-300">Reranker</div>
+      <div class="bg-white/5 rounded-lg p-4 text-slate-300">Query preprocessing</div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="max-w-5xl mx-auto px-6 py-16 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-10">Pricing</h2>
+    <div class="max-w-md mx-auto bg-white/5 border border-emerald-500/20 rounded-2xl p-8">
+      <h3 class="text-white font-semibold text-lg">Starter</h3>
+      <div class="mt-2"><span class="text-4xl font-bold text-white">$99</span><span class="text-slate-400">/month</span></div>
+      <ul class="mt-6 space-y-3 text-sm text-slate-300">
+        <li class="flex gap-2"><span class="text-emerald-400">&#10003;</span> Up to 500 failure cases diagnosed per month</li>
+        <li class="flex gap-2"><span class="text-emerald-400">&#10003;</span> Root-cause attribution across all five components</li>
+        <li class="flex gap-2"><span class="text-emerald-400">&#10003;</span> Ranked report with the highest-impact fix</li>
+        <li class="flex gap-2"><span class="text-emerald-400">&#10003;</span> Cancel anytime · 14-day money-back guarantee</li>
+      </ul>
+      <!--
+        PADDLE CHECKOUT — wire once a seller account is verified (see human-ops/requests.md).
+        Replace the free-audit CTA below with the Paddle.js overlay button:
+          <button data-price-id="pri_01ky508wyhqfd94np7amnhz51n" ...>Subscribe</button>
+          Paddle.Setup({ token: '<live client-side token from the VERIFIED account>' });
+        Backend API key stays in this private repo's .env only, never the public mirror.
+        Until then, checkout is not live — the honest CTA is the free audit.
+      -->
+      <a href="#audit" class="mt-8 block text-center bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">Start with a free audit</a>
+      <p class="text-xs text-slate-500 mt-3 text-center">Billed monthly via Paddle, our merchant of record. Checkout opens once you've seen your audit and want ongoing access.</p>
+    </div>
+  </section>
+
+  <!-- Free audit form -->
+  <section id="audit" class="max-w-xl mx-auto px-6 py-16 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-2">Request your free RAG failure audit</h2>
+    <p class="text-slate-400 text-center text-sm mb-8">Tell us about your stack. We'll reply with what to send and run the diagnostic on your top failure cases — free, no card.</p>
+    <form action="https://formsubmit.co/team@atlasventuresgroup.net" method="POST" class="space-y-4">
+      <input type="hidden" name="_subject" value="RAGDiag — free audit request" />
+      <input type="hidden" name="_next" value="https://atlasventuresgroup.net/ragdiag/thanks.html" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="text" name="_honey" style="display:none" />
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">Work email</label>
+        <input type="email" name="email" required class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="you@company.com" />
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">Your RAG stack <span class="text-slate-500">(optional)</span></label>
+        <input type="text" name="stack" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="e.g. LlamaIndex + Qdrant + a reranker" />
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">What's going wrong? <span class="text-slate-500">(optional)</span></label>
+        <textarea name="problem" rows="3" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="Wrong answers on certain query types, retrieval misses, etc."></textarea>
+      </div>
+      <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">Request my free audit</button>
+      <p class="text-xs text-slate-500 text-center">We use what you send only to run and follow up on your audit. See our <a href="privacy.html" class="text-emerald-400">Privacy Policy</a>.</p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <div>
+          <div class="font-semibold text-white">RAG<span class="text-emerald-400">Diag</span></div>
+          <p class="mt-1">Operated by Atlas Ventures Group.</p>
+          <p><a href="mailto:team@atlasventuresgroup.net" class="text-emerald-400">team@atlasventuresgroup.net</a></p>
+        </div>
+        <div class="flex gap-6">
+          <a href="terms.html" class="hover:text-slate-300">Terms</a>
+          <a href="privacy.html" class="hover:text-slate-300">Privacy</a>
+          <a href="refund.html" class="hover:text-slate-300">Refunds</a>
+        </div>
+      </div>
+      <p class="mt-8 text-xs">Payments are processed by Paddle.com, our merchant of record. RAGDiag is in early access. &copy; 2026 Atlas Ventures Group.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

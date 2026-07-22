@@ -1,540 +1,166 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Hire MSP Technicians Direct | $49 Flat Job Listing vs $3,950 Recruiter Fees</title>
-  <meta name="description" content="Hire your next L1-L3 MSP Technician where MSP owners actually hang out. Post a flat $49-$99 job listing directly into the 188,000+ member r/msp community." />
-  <meta name="keywords" content="MSP technician hiring, MSP job board, ConnectWise engineer, Autotask tech, IT recruiter alternative" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              bg: '#0B0F17',
-              surface: '#131B2A',
-              emerald: '#10B981',
-              cyan: '#06B6D4',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    /* Subtle glow keyframe animation */
-    @keyframes pulse-slow {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.8; }
-    }
-    .animate-pulse-slow {
-      animation: pulse-slow 6s ease-in-out infinite;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Atlas Ventures Group — Focused software products for expensive, specific problems</title>
+<meta name="description" content="Atlas Ventures Group is a software venture studio. We build focused, self-serve products that fix expensive, specific problems — starting from real, documented pain." />
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#0B0F17] text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+<body class="bg-[#0B0F17] text-slate-200 antialiased">
 
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0B0F17]/80 border-b border-slate-800/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/20">
-          <svg class="w-5 h-5 text-slate-950 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <polyline points="4 17 10 11 4 5"></polyline>
-            <line x1="12" y1="19" x2="20" y2="19"></line>
-          </svg>
-        </div>
-        <span class="font-display font-bold text-xl tracking-tight text-white">
-          MSP<span class="text-emerald-400">TechJobs</span>
-        </span>
-      </div>
-
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#comparison" class="hover:text-emerald-400 transition-colors">Why Us</a>
-        <a href="#benefits" class="hover:text-emerald-400 transition-colors">Features</a>
-        <a href="#pricing" class="hover:text-emerald-400 transition-colors">Pricing</a>
-        <a href="#faq" class="hover:text-emerald-400 transition-colors">FAQ</a>
+  <!-- Nav -->
+  <header class="border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-semibold text-white tracking-tight">Atlas Ventures <span class="text-emerald-400">Group</span></span>
+      <nav class="flex gap-6 text-sm text-slate-300">
+        <a href="#products" class="hover:text-white transition">Products</a>
+        <a href="#about" class="hover:text-white transition hidden sm:inline">About</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
       </nav>
-
-      <div class="flex items-center gap-4">
-        <a href="#pricing" class="inline-flex items-center justify-center font-display font-semibold text-sm px-5 py-2.5 rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:scale-[1.02] transition-all duration-300">
-          Post a Job ($49)
-        </a>
-      </div>
     </div>
   </header>
 
-  <section class="relative pt-20 pb-24 overflow-hidden">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none animate-pulse-slow"></div>
-    <div class="absolute top-1/3 left-1/3 w-[400px] h-[250px] bg-cyan-500/10 blur-[110px] rounded-full pointer-events-none"></div>
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
+    <span class="inline-block text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-6">Software venture studio</span>
+    <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
+      We build focused software products that fix <span class="text-emerald-400">expensive, specific problems.</span>
+    </h1>
+    <p class="text-lg text-slate-400 mt-6 max-w-2xl mx-auto">
+      Every product starts from a real, documented pain — sourced from practitioner communities,
+      not brainstorms — and does one job well. Built lean, launched in early access, grown only
+      when it earns it.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#products" class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">See our products</a>
+      <a href="#contact" class="border border-white/15 hover:border-white/30 text-slate-200 font-medium px-6 py-3 rounded-lg transition">Get in touch</a>
+    </div>
+  </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center max-w-4xl mx-auto">
-        
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs sm:text-sm text-slate-300 mb-8 shadow-inner">
-          <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span class="text-emerald-400 font-semibold">In beta</span>
-          <span class="text-slate-600">|</span>
-          <span>Posted directly into the 188,000+ member r/msp community</span>
-        </div>
+  <!-- Products -->
+  <section id="products" class="max-w-5xl mx-auto px-6 py-12 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-10">Products</h2>
+    <div class="grid sm:grid-cols-2 gap-5">
 
-        <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6">
-          Hire your next MSP technician <br class="hidden sm:block" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-            where MSP owners actually hang out.
-          </span>
-        </h1>
-
-        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
-          Stop paying recruiters <span class="text-rose-400 font-semibold underline decoration-rose-500/40 underline-offset-4">$3,950+ in upfront fees</span> for generic resume submitters. Post straight to a hyper-focused community of Tier 1–3 Engineers, Systems Admins, and vCIOs.
+      <!-- MSPTechJobs -->
+      <div class="bg-white/5 rounded-xl p-6 flex flex-col">
+        <span class="self-start text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-4">Beta</span>
+        <h3 class="text-white font-semibold text-lg">MSPTechJobs</h3>
+        <p class="text-sm text-slate-400 mt-2 flex-1">
+          Flat-fee job listings that reach MSP technicians where they already are. $49 Standard /
+          $99 Featured, posted into MSP-focused community channels — a fraction of a typical
+          recruiter fee.
         </p>
+        <a href="msptechjobs/" class="mt-5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">Visit MSPTechJobs &rarr;</a>
+      </div>
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-          <a href="#reserve" class="w-full sm:w-auto inline-flex items-center justify-center font-display font-bold text-base px-8 py-4 rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] hover:scale-[1.02] transition-all duration-300">
-            Reserve Your Listing Free
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-          </a>
-          <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center font-display font-semibold text-base px-8 py-4 rounded-lg border border-slate-700 hover:border-emerald-500/50 text-slate-200 hover:bg-slate-800/50 transition-all duration-300">
-            Pay Now Instead ($49-99)
-          </a>
-        </div>
-        <p class="-mt-8 mb-14 text-sm text-slate-400">
-          No card required to reserve — you approve the listing, then pay only when it goes live. <a href="#comparison" class="text-emerald-400 hover:underline font-semibold">See the pricing math</a>.
+      <!-- RAGDiag -->
+      <div class="bg-white/5 rounded-xl p-6 flex flex-col">
+        <span class="self-start text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-4">Early access</span>
+        <h3 class="text-white font-semibold text-lg">RAG<span class="text-emerald-400">Diag</span></h3>
+        <p class="text-sm text-slate-400 mt-2 flex-1">
+          Your RAG system gave a wrong answer — RAGDiag tells you which part broke. It isolates
+          which component caused each failure — chunking, embedding, retrieval ranking, reranking,
+          or query preprocessing — and ranks the highest-impact fix.
         </p>
-
-        <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div>
-            <div class="font-display text-3xl font-bold text-emerald-400">$49 - $99</div>
-            <div class="text-xs text-slate-400 mt-1">Flat Rate (No % Commission)</div>
-          </div>
-          <div>
-            <div class="font-display text-3xl font-bold text-white">$3,950+</div>
-            <div class="text-xs text-slate-400 mt-1">Typical Agency Fee, Saved</div>
-          </div>
-          <div>
-            <div class="font-display text-3xl font-bold text-white">188,000+</div>
-            <div class="text-xs text-slate-400 mt-1">r/msp Members</div>
-          </div>
-          <div>
-            <div class="font-display text-3xl font-bold text-cyan-400">11,000+</div>
-            <div class="text-xs text-slate-400 mt-1">MSPGeek Discord Members</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="comparison" class="py-20 bg-slate-950/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20 mb-4">
-          The Math Is Simple
-        </span>
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white">
-          Stop paying recruiter extortion fees for basic tech hiring.
-        </h2>
+        <a href="ragdiag/" class="mt-5 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition">Visit RAGDiag &rarr;</a>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div class="bg-slate-900/80 border border-rose-900/30 rounded-2xl p-8 bg-rose-950/10">
-          <div class="text-rose-400 font-display font-bold text-xl mb-2">Traditional Staffing Agency</div>
-          <div class="text-3xl font-extrabold text-white mb-6">$3,950+ <span class="text-xs font-normal text-slate-400">upfront, per hire</span></div>
-          <ul class="space-y-4 text-sm text-slate-300">
-            <li class="flex items-start gap-3">
-              <span class="text-rose-500 font-bold">✕</span>
-              <span>15-20% commission on candidate's annual salary</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-rose-500 font-bold">✕</span>
-              <span>Recruiters don't know what HaloPSA, Datto, or Kaseya mean</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-rose-500 font-bold">✕</span>
-              <span>Sift through enterprise IT admins who fail at fast-paced MSP multi-tasking</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-slate-900 border border-emerald-500/40 rounded-2xl p-8 relative shadow-xl shadow-emerald-950/20">
-          <div class="absolute -top-3 right-6">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-slate-950">Smart Alternative</span>
-          </div>
-          <div class="text-emerald-400 font-display font-bold text-xl mb-2">MSP Tech Jobs</div>
-          <div class="text-3xl font-extrabold text-white mb-6">$49 – $99 <span class="text-xs font-normal text-slate-400">flat rate / listing</span></div>
-          <ul class="space-y-4 text-sm text-slate-200">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              <span><strong>Zero placement commissions.</strong> Keep 100% of your hiring budget</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              <span>Placed directly in front of vetted MSP technicians who understand billable hours & ticketing</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-              <span>Direct applicant contact — no gated candidate profiles</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="benefits" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-          Built specifically for the unique demands of MSP Owners
-        </h2>
-        <p class="text-slate-400 text-base">
-          General job boards bury you in irrelevant resumes from corporate helpdesks. We give you candidates who understand RMMs, PSAs, and MSP pacing on day one.
+      <!-- Bookkeeping Cleanup Auditor -->
+      <div class="bg-white/5 rounded-xl p-6 flex flex-col">
+        <span class="self-start text-xs font-medium text-amber-300 bg-amber-500/10 border border-amber-500/20 rounded-full px-3 py-1 mb-4">In development</span>
+        <h3 class="text-white font-semibold text-lg">Bookkeeping Cleanup Auditor</h3>
+        <p class="text-sm text-slate-400 mt-2 flex-1">
+          Suspect your books are wrong? Upload a QuickBooks Online or Xero export and get a dated
+          diagnostic report flagging miscategorized transactions, duplicates, unreconciled accounts,
+          and common handoff errors. Diagnostic only — it never touches your ledger.
         </p>
+        <a href="#waitlist" class="mt-5 text-sm font-semibold text-amber-300 hover:text-amber-200 transition">Join the waitlist &rarr;</a>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-slate-900/80 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">Concentrated Talent Pool</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Your listing goes into MSPGeek Discord and r/msp — the two places MSP technicians actually gather and exchange knowledge, not a generic resume database.
-          </p>
-        </div>
-
-        <div class="bg-slate-900/80 border border-slate-800/80 rounded-2xl p-6 hover:border-cyan-500/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">Tool-Specific Filtering</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Filter candidates by exact MSP stack expertise: ConnectWise Manage, Autotask, HaloPSA, N-able, NinjaRMM, SentinelOne, Datto, and Pax8.
-          </p>
-        </div>
-
-        <div class="bg-slate-900/80 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <h3 class="font-display text-xl font-bold text-white mb-3">Direct Community Distribution</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Your listing is posted directly into MSPGeek Discord and r/msp by us — not scraped into a generic feed alongside thousands of unrelated postings.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="pricing" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-          Simple, transparent pricing. No contracts.
-        </h2>
-        <p class="text-slate-400">Pick the listing visibility that fits your hiring timeline.</p>
-        <p class="text-xs text-slate-500 mt-3">In beta — our payment provider is completing final review. If checkout errors, <a href="#reserve" class="text-emerald-400 hover:underline">reserve your listing below</a> and pay only when it posts.</p>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
-          <div>
-            <h3 class="font-display text-xl font-bold text-white">Standard Post</h3>
-            <p class="text-xs text-slate-400 mt-1">Perfect for urgent single-role hiring</p>
-            <div class="my-6">
-              <span class="text-4xl font-extrabold text-white">$49</span>
-              <span class="text-slate-400 text-sm"> / 30-day post</span>
-            </div>
-            <ul class="space-y-3 text-sm text-slate-300 mb-8">
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                30 days live on community job board
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                Posted to one of MSPGeek Discord or r/msp
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                Applicants contact you directly (email/ATS link you provide)
-              </li>
-            </ul>
-          </div>
-          <button id="checkout-basic" type="button" class="w-full py-3 px-4 rounded-lg border border-slate-700 hover:border-emerald-500/50 text-slate-200 hover:bg-slate-800/50 font-display font-semibold transition-all">
-            Post Standard Job
-          </button>
-        </div>
-
-        <div class="bg-slate-900/90 border border-emerald-500/50 rounded-2xl p-8 relative flex flex-col justify-between shadow-2xl shadow-emerald-950/30">
-          <div class="absolute -top-3 right-6">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-slate-950">Most Popular</span>
-          </div>
-          <div>
-            <h3 class="font-display text-xl font-bold text-white">Featured Post</h3>
-            <p class="text-xs text-slate-400 mt-1">Maximum reach for specialized roles</p>
-            <div class="my-6">
-              <span class="text-4xl font-extrabold text-emerald-400">$99</span>
-              <span class="text-slate-400 text-sm"> / 45-day post</span>
-            </div>
-            <ul class="space-y-3 text-sm text-slate-200 mb-8">
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                <strong>Everything in Standard</strong>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                Pinned top of job feed for 14 days
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-emerald-400 font-bold">✓</span>
-                Posted to both MSPGeek Discord and r/msp (Standard posts to one channel)
-              </li>
-            </ul>
-          </div>
-          <button id="checkout-premium" type="button" class="w-full py-3 px-4 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-display font-bold hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] transition-all">
-            Post Featured Job
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="reserve" class="py-20 bg-slate-950/60">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-slate-900/90 border border-cyan-500/30 rounded-2xl p-8 sm:p-12">
-        <div class="text-center mb-8">
-          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
-            Founding Listing — $0 today
-          </span>
-          <h2 class="font-display text-3xl font-bold text-white mb-3">Reserve your listing, pay when it posts</h2>
-          <p class="text-slate-400 text-sm max-w-xl mx-auto">
-            Tell us the role you're hiring for. We'll confirm within 24 hours, you approve the final listing, and you're only charged ($49 or $99) when it actually goes live.
-          </p>
-        </div>
-        <form action="https://formsubmit.co/team@atlasventuresgroup.net" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <input type="hidden" name="_subject" value="Founding listing reservation — MSPTechJobs">
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_next" value="https://atlasventuresgroup.net/thanks.html">
-          <div>
-            <label for="rsv-name" class="block text-xs font-semibold text-slate-300 mb-1.5">Your name</label>
-            <input id="rsv-name" type="text" name="name" required class="w-full rounded-lg bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-slate-500" placeholder="Jane Smith">
-          </div>
-          <div>
-            <label for="rsv-company" class="block text-xs font-semibold text-slate-300 mb-1.5">MSP / company</label>
-            <input id="rsv-company" type="text" name="company" required class="w-full rounded-lg bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-slate-500" placeholder="Acme Managed IT">
-          </div>
-          <div>
-            <label for="rsv-email" class="block text-xs font-semibold text-slate-300 mb-1.5">Work email</label>
-            <input id="rsv-email" type="email" name="email" required class="w-full rounded-lg bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-slate-500" placeholder="jane@acmemsp.com">
-          </div>
-          <div>
-            <label for="rsv-tier" class="block text-xs font-semibold text-slate-300 mb-1.5">Listing tier</label>
-            <select id="rsv-tier" name="tier" class="w-full rounded-lg bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:outline-none px-4 py-3 text-sm text-white">
-              <option value="Standard $49">Standard — $49</option>
-              <option value="Featured $99">Featured — $99</option>
-              <option value="Undecided">Not sure yet</option>
-            </select>
-          </div>
-          <div class="sm:col-span-2">
-            <label for="rsv-role" class="block text-xs font-semibold text-slate-300 mb-1.5">Role you're hiring for</label>
-            <input id="rsv-role" type="text" name="role" required class="w-full rounded-lg bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:outline-none px-4 py-3 text-sm text-white placeholder-slate-500" placeholder="L2 Help Desk Technician — ConnectWise, remote US">
-          </div>
-          <div class="sm:col-span-2">
-            <button type="submit" class="w-full py-4 px-4 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-display font-bold text-base hover:shadow-[0_0_25px_rgba(6,182,212,0.4)] transition-all">
-              Reserve My Listing — Pay Later
-            </button>
-            <p class="text-xs text-slate-500 mt-3 text-center">No card required. We reply from team@atlasventuresgroup.net within 24 hours.</p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="py-20 bg-slate-950/40">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="font-display text-3xl font-bold text-white mb-3">Frequently Asked Questions</h2>
-        <p class="text-slate-400 text-sm">Everything you need to know about listing your MSP role</p>
-      </div>
-
-      <div class="space-y-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-          <button onclick="toggleFaq('faq-1')" class="w-full p-5 flex items-center justify-between text-left text-white font-semibold text-base focus:outline-none">
-            <span>Why are candidate responses higher quality than LinkedIn or Indeed?</span>
-            <svg id="icon-faq-1" class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div id="faq-1" class="hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
-            Because general job portals attract thousands of corporate IT admins who are accustomed to slow enterprise environments. The communities we post into — MSPGeek Discord and r/msp — skew heavily toward technicians who currently work in MSP environments.
-          </div>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-          <button onclick="toggleFaq('faq-2')" class="w-full p-5 flex items-center justify-between text-left text-white font-semibold text-base focus:outline-none">
-            <span>Are there any hidden hire fees or success charges?</span>
-            <svg id="icon-faq-2" class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div id="faq-2" class="hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
-            Never. You pay a single flat listing fee ($49 or $99). Whether you hire 1 technician or 3, you never pay a dollar more.
-          </div>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-          <button onclick="toggleFaq('faq-3')" class="w-full p-5 flex items-center justify-between text-left text-white font-semibold text-base focus:outline-none">
-            <span>What types of technicians are in the community?</span>
-            <svg id="icon-faq-3" class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div id="faq-3" class="hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
-            Tier 1-3 Helpdesk Techs, On-Site Field Engineers, Network/Systems Engineers, MSP Service Desk Managers, and vCIOs familiar with ConnectWise, Autotask, HaloPSA, and modern RMM stacks.
-          </div>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-          <button onclick="toggleFaq('faq-4')" class="w-full p-5 flex items-center justify-between text-left text-white font-semibold text-base focus:outline-none">
-            <span>How fast will my post go live?</span>
-            <svg id="icon-faq-4" class="w-5 h-5 text-slate-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </button>
-          <div id="faq-4" class="hidden px-5 pb-5 text-slate-300 text-sm leading-relaxed border-t border-slate-800/60 pt-4">
-            We're in beta, so listings are reviewed and posted by hand — typically within 24 hours of purchase, straight into MSPGeek Discord and/or r/msp.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-24 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/30 via-slate-950 to-cyan-950/30 pointer-events-none"></div>
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <div class="bg-slate-900/90 border border-emerald-500/30 rounded-2xl p-10 sm:p-16 shadow-2xl">
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-6">
-          Ready to hire your next technician without recruiter tax?
-        </h2>
-        <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-8">
-          Post your job now for $49 and connect with technicians who know your tools, understand billable time, and get to work on day one.
+      <!-- More in the works -->
+      <div class="bg-white/5 rounded-xl p-6 flex flex-col border border-dashed border-white/10">
+        <span class="self-start text-xs font-medium text-slate-400 bg-white/5 border border-white/10 rounded-full px-3 py-1 mb-4">In validation</span>
+        <h3 class="text-white font-semibold text-lg">More in the works</h3>
+        <p class="text-sm text-slate-400 mt-2 flex-1">
+          We continuously test new product ideas against real, documented demand — and only build
+          the ones that prove it. When the next one is real, it appears here. Most ideas don't
+          make it; that's the point.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="#pricing" class="inline-flex items-center justify-center font-display font-bold text-base px-8 py-4 rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 hover:shadow-[0_0_25px_rgba(16,185,129,0.4)] transition-all">
-            Create Your Job Listing ($49)
-          </a>
-        </div>
-        <p class="text-xs text-slate-500 mt-6">Takes less than 3 minutes to check out • Reviewed and posted within 24 hours</p>
+        <a href="#contact" class="mt-5 text-sm font-semibold text-slate-400 hover:text-slate-300 transition">Tell us about a problem &rarr;</a>
       </div>
+
     </div>
   </section>
 
-  <footer class="border-t border-slate-800/80 bg-slate-950 py-12 text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+  <!-- Waitlist -->
+  <section id="waitlist" class="max-w-xl mx-auto px-6 py-16 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-2">Bookkeeping Cleanup Auditor — waitlist</h2>
+    <p class="text-slate-400 text-center text-sm mb-8">
+      In development now. Leave your email and we'll invite you when the first version is ready —
+      early waitlist members get their first audit free.
+    </p>
+    <form action="https://formsubmit.co/team@atlasventuresgroup.net" method="POST" class="space-y-4">
+      <input type="hidden" name="_subject" value="Bookkeeping Cleanup Auditor — waitlist signup" />
+      <input type="hidden" name="_next" value="https://atlasventuresgroup.net/thanks.html" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="text" name="_honey" style="display:none" />
       <div>
-        <div class="flex items-center gap-2 mb-4">
-          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-            <polyline points="4 17 10 11 4 5"></polyline>
-            <line x1="12" y1="19" x2="20" y2="19"></line>
-          </svg>
-          <span class="font-display font-bold text-white text-base">MSPTechJobs</span>
+        <label class="block text-sm text-slate-300 mb-1">Email</label>
+        <input type="email" name="email" required class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="you@company.com" />
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">Your books <span class="text-slate-500">(optional)</span></label>
+        <input type="text" name="books" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="e.g. QuickBooks Online, Xero" />
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">What do you suspect is wrong? <span class="text-slate-500">(optional)</span></label>
+        <textarea name="problem" rows="3" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="Inherited messy books, offshore bookkeeper errors, accounts that never reconcile…"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">Join the waitlist</button>
+      <p class="text-xs text-slate-500 text-center">We use your email only to contact you about this product. See our <a href="privacy.html" class="text-emerald-400">Privacy Policy</a>.</p>
+    </form>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-3xl mx-auto px-6 py-16 border-t border-white/5 text-center">
+    <h2 class="text-2xl font-bold text-white mb-4">About</h2>
+    <p class="text-slate-400 leading-relaxed">
+      Atlas Ventures Group is a software venture studio. We find expensive, specific problems —
+      documented in real practitioner communities — and build focused, self-serve products that
+      fix them. Products launch in early access, stay honest about what they can do, and grow
+      only when they earn it.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-16 border-t border-white/5 text-center">
+    <h2 class="text-2xl font-bold text-white mb-4">Contact</h2>
+    <p class="text-slate-400">Questions, a problem worth fixing, or anything about our products:</p>
+    <a href="mailto:info@atlasventuresgroup.net" class="inline-block mt-4 text-emerald-400 hover:text-emerald-300 font-semibold transition">info@atlasventuresgroup.net</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <div>
+          <div class="font-semibold text-white">Atlas Ventures <span class="text-emerald-400">Group</span></div>
+          <p class="mt-1">A software venture studio.</p>
+          <p><a href="mailto:info@atlasventuresgroup.net" class="text-emerald-400">info@atlasventuresgroup.net</a></p>
         </div>
-        <p class="text-xs text-slate-500 leading-relaxed">
-          The direct talent bridge for MSP owners and experienced tech talent. Zero recruiter margins.
-        </p>
+        <div class="flex flex-wrap gap-6">
+          <a href="msptechjobs/" class="hover:text-slate-300">MSPTechJobs</a>
+          <a href="ragdiag/" class="hover:text-slate-300">RAGDiag</a>
+          <a href="terms.html" class="hover:text-slate-300">Terms</a>
+          <a href="privacy.html" class="hover:text-slate-300">Privacy</a>
+          <a href="refund.html" class="hover:text-slate-300">Refunds</a>
+        </div>
       </div>
-
-      <div>
-        <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">For Employers</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#pricing" class="hover:text-white transition-colors">Post a Job ($49)</a></li>
-          <li><a href="#comparison" class="hover:text-white transition-colors">Pricing vs Recruiters</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Where We Post</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="https://reddit.com/r/msp" class="hover:text-white transition-colors">r/msp</a></li>
-          <li><a href="https://mspgeek.org" class="hover:text-white transition-colors">MSPGeek Discord</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="font-semibold text-white mb-3 text-xs uppercase tracking-wider">Legal & Contact</h4>
-        <ul class="space-y-2 text-xs">
-          <li><a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
-          <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-          <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
-          <li><a href="mailto:team@atlasventuresgroup.net" class="hover:text-white transition-colors">team@atlasventuresgroup.net</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-      <div>© 2026 MSPTechJobs. Independent MSP hiring board, not affiliated with any PSA/RMM vendor.</div>
+      <p class="mt-8 text-xs">Payments on product pages are processed by Paddle.com, our merchant of record. &copy; 2026 Atlas Ventures Group.</p>
     </div>
   </footer>
 
-  <script>
-    function toggleFaq(id) {
-      const content = document.getElementById(id);
-      const icon = document.getElementById('icon-' + id);
-
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        icon.classList.add('rotate-180', 'text-emerald-400');
-      } else {
-        content.classList.add('hidden');
-        icon.classList.remove('rotate-180', 'text-emerald-400');
-      }
-    }
-  </script>
-
-  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-  <script>
-    // Only the public-safe client-side token belongs here — the Paddle API/backend key
-    // must never go in this file (lives in the private repo's .env instead).
-    const PADDLE_ENV = 'production';
-    const PADDLE_CLIENT_TOKEN = 'live_2e064b7478bf7fa918eeb9e3ee8';
-    const PRICE_ID_BASIC = 'pri_01kxby4q3qtnafbg4aa2wp00jg'; // $49
-    const PRICE_ID_PREMIUM = 'pri_01kxby2tdvtke95zc77x0sjmws'; // $99
-
-    Paddle.Environment.set(PADDLE_ENV);
-    Paddle.Setup({ token: PADDLE_CLIENT_TOKEN });
-
-    document.getElementById('checkout-basic').addEventListener('click', function () {
-      Paddle.Checkout.open({ items: [{ priceId: PRICE_ID_BASIC, quantity: 1 }] });
-    });
-    document.getElementById('checkout-premium').addEventListener('click', function () {
-      Paddle.Checkout.open({ items: [{ priceId: PRICE_ID_PREMIUM, quantity: 1 }] });
-    });
-  </script>
 </body>
 </html>
