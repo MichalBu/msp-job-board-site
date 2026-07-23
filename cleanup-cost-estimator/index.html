@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>QuickBooks Cleanup Cost Estimator - free tool | Atlas Ventures Group</title>
+<meta name="description" content="Free estimator: how much will it cost to clean up your overdue or messy QuickBooks / Xero books? Ranges grounded in rates bookkeepers actually quote - typical 1-year cleanups run $2,000-$6,000." />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0B0F17] text-slate-200 antialiased">
+
+  <!-- Nav -->
+  <header class="border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" title="Atlas Ventures Group - home" class="font-semibold text-white tracking-tight">Books<span class="text-emerald-400">Audit</span></a>
+      <a href="#waitlist" class="text-sm bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-4 py-2 rounded-lg transition">Get a free diagnostic</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-6 pt-16 pb-10 text-center">
+    <span class="inline-block text-xs font-medium text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 mb-6">Free tool - no signup needed to see your estimate</span>
+    <h1 class="text-4xl sm:text-5xl font-bold text-white leading-tight max-w-3xl mx-auto">
+      How much will your QuickBooks <span class="text-emerald-400">cleanup actually cost?</span>
+    </h1>
+    <p class="text-lg text-slate-400 mt-6 max-w-2xl mx-auto">
+      Behind on your books, or inherited a mess from a cheap bookkeeper? Get a realistic
+      cost range in 30 seconds - built from the rates bookkeepers and CPAs actually quote,
+      not a sales pitch.
+    </p>
+  </section>
+
+  <!-- Estimator -->
+  <section class="max-w-3xl mx-auto px-6 pb-12">
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="block text-sm text-slate-300 mb-1" for="months">How many months behind (or messy)?</label>
+          <select id="months" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none">
+            <option value="3">1-3 months</option>
+            <option value="6">4-6 months</option>
+            <option value="12" selected>About a year</option>
+            <option value="18">12-18 months</option>
+            <option value="24">2 years or more</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm text-slate-300 mb-1" for="txns">Transactions per month (roughly)</label>
+          <select id="txns" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none">
+            <option value="low">Under 50</option>
+            <option value="med" selected>50-150</option>
+            <option value="high">150-400</option>
+            <option value="vhigh">400+</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm text-slate-300 mb-1" for="condition">State of the books</label>
+          <select id="condition" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none">
+            <option value="messy" selected>Entered but messy (miscategorized, duplicates)</option>
+            <option value="unreconciled">Never reconciled against bank statements</option>
+            <option value="empty">Barely entered at all</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm text-slate-300 mb-1" for="accounts">Bank + credit card accounts</label>
+          <select id="accounts" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none">
+            <option value="2" selected>1-2</option>
+            <option value="4">3-4</option>
+            <option value="6">5 or more</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="block text-sm text-slate-300 mb-1" for="who">Who would do the cleanup?</label>
+          <select id="who" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none">
+            <option value="bookkeeper" selected>An independent bookkeeper</option>
+            <option value="cpa">A CPA firm</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="mt-8 border-t border-white/10 pt-6 text-center">
+        <p class="text-sm text-slate-400 mb-1">Realistic quote range for this cleanup</p>
+        <p id="result" class="text-4xl font-bold text-emerald-400">$3,300 - $6,000</p>
+        <p id="perTxn" class="text-xs text-slate-500 mt-2"></p>
+        <p class="text-xs text-slate-500 mt-4 max-w-md mx-auto">
+          Estimates only, based on publicly quoted practitioner rates (see method below).
+          Your actual quote depends on what a bookkeeper finds once they open the file.
+          This is not accounting, tax, or financial advice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The catch + pitch -->
+  <section class="max-w-3xl mx-auto px-6 py-10 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white mb-4">Why every quote you get will be higher than you expect</h2>
+    <p class="text-slate-400 leading-relaxed">
+      Bookkeepers describe cleanup work as a mystery box: they can't see how bad the file is
+      until they're inside it, and most owners won't hand over account access before signing.
+      So practitioners quote high to protect themselves, and the real number "almost always
+      costs much more once you dig in." The single thing that lowers your quote is knowing
+      exactly what's wrong before anyone bills an hour.
+    </p>
+    <div class="mt-6 bg-emerald-500/5 border border-emerald-500/20 rounded-xl p-6">
+      <h3 class="text-lg font-semibold text-white mb-2">That diagnosis is what we're building</h3>
+      <p class="text-slate-400 leading-relaxed text-sm">
+        BooksAudit reads your QuickBooks Online or Xero export and returns a dated diagnostic
+        report: miscategorized transactions, duplicates, unreconciled accounts, and the common
+        offshore-handoff errors - before you pay anyone to fix them. Diagnostic only: it never
+        touches your ledger. Use the report to scope the fix yourself, or hand it to your
+        bookkeeper so they can quote the real job instead of the mystery box.
+      </p>
+    </div>
+  </section>
+
+  <!-- Waitlist form -->
+  <section id="waitlist" class="max-w-xl mx-auto px-6 py-12 border-t border-white/5">
+    <h2 class="text-2xl font-bold text-white text-center mb-2">Get a free diagnostic of your books</h2>
+    <p class="text-slate-400 text-center text-sm mb-8">Early access: we'll reply with what to export, run the diagnostic on it, and send back your report - free, no card.</p>
+    <!-- Standing convention: all site forms POST to the form-intake Lambda (SES → team@). -->
+    <form action="https://sceg3rbntvunklbuqe4mzb4eea0vrcwc.lambda-url.us-east-1.on.aws/" method="POST" class="space-y-4">
+      <input type="hidden" name="_subject" value="BooksAudit - cleanup estimator waitlist" />
+      <input type="hidden" name="_next" value="https://atlasventuresgroup.net/thanks.html" />
+      <input type="text" name="_honey" style="display:none" />
+      <input type="hidden" name="estimator_inputs" id="estimator_inputs" value="" />
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">Email</label>
+        <input type="email" name="email" required class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="you@yourbusiness.com" />
+      </div>
+      <div>
+        <label class="block text-sm text-slate-300 mb-1">What's the situation? <span class="text-slate-500">(optional)</span></label>
+        <textarea name="situation" rows="3" class="w-full bg-[#0B0F17] border border-white/15 rounded-lg px-4 py-2.5 text-slate-100 focus:border-emerald-400 focus:outline-none" placeholder="e.g. About a year behind in QBO, previous bookkeeper miscategorized everything"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition">Request my free diagnostic</button>
+      <p class="text-xs text-slate-500 text-center">We use what you send only to run and follow up on your diagnostic. See our <a href="/privacy.html" class="text-emerald-400">Privacy Policy</a>.</p>
+    </form>
+  </section>
+
+  <!-- Methodology -->
+  <section class="max-w-3xl mx-auto px-6 py-10 border-t border-white/5">
+    <h2 class="text-xl font-bold text-white mb-4">How this estimator works</h2>
+    <ul class="text-sm text-slate-400 space-y-2 leading-relaxed list-disc list-inside">
+      <li>Practitioners in public bookkeeping forums (July 2026) consistently quote <span class="text-slate-200">$2,000-$6,000 for a typical 1-year cleanup</span>, with $5,000-$15,000 common for larger or messier files, and CPA-grade work billed at up to $250/hour.</li>
+      <li>Monthly bookkeeping floors quoted repeatedly: <span class="text-slate-200">$200-$500/month minimum</span>, scaling with transaction volume.</li>
+      <li>The pricing mechanic bookkeepers describe using: months of catch-up x an equivalent monthly rate, plus a <span class="text-slate-200">10-25% hassle premium</span>; some quote $2-$10 per transaction instead. Never-reconciled books and payroll add real hours.</li>
+      <li>This tool applies those same published mechanics to your inputs. It is a range, not a quote, and not accounting, tax, or financial advice.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-slate-500">
+      <div class="flex flex-col sm:flex-row justify-between gap-4">
+        <p>BooksAudit is a product of <a href="/" class="text-emerald-400">Atlas Ventures Group</a>.</p>
+        <p><a href="/privacy.html" class="hover:text-slate-300">Privacy</a> · <a href="/terms.html" class="hover:text-slate-300">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var monthlyRates = { low: [150, 250], med: [250, 400], high: [400, 650], vhigh: [600, 900] };
+      var txnMid = { low: 30, med: 100, high: 275, vhigh: 500 };
+      var ids = ["months", "txns", "condition", "accounts", "who"];
+
+      function estimate() {
+        var months = parseInt(document.getElementById("months").value, 10);
+        var txns = document.getElementById("txns").value;
+        var condition = document.getElementById("condition").value;
+        var accounts = parseInt(document.getElementById("accounts").value, 10);
+        var who = document.getElementById("who").value;
+
+        var lo = months * monthlyRates[txns][0] * 1.10;
+        var hi = months * monthlyRates[txns][1] * 1.25;
+
+        // Condition: never-reconciled and barely-entered books take materially more hours
+        if (condition === "unreconciled") { lo *= 1.2; hi *= 1.3; }
+        if (condition === "empty") { lo *= 1.35; hi *= 1.5; }
+
+        // Extra accounts beyond 2 add reconciliation passes
+        var extra = Math.max(0, accounts - 2) * 0.05;
+        lo *= 1 + Math.min(extra, 0.25);
+        hi *= 1 + Math.min(extra, 0.25);
+
+        // CPA firms bill at roughly 2-2.5x independent bookkeeper rates
+        if (who === "cpa") { lo *= 2.0; hi *= 2.5; }
+
+        lo = Math.max(300, Math.round(lo / 100) * 100);
+        hi = Math.max(lo + 200, Math.round(hi / 100) * 100);
+
+        document.getElementById("result").textContent = "$" + lo.toLocaleString() + " - $" + hi.toLocaleString();
+
+        var totalTxns = months * txnMid[txns];
+        var perLo = (lo / totalTxns).toFixed(2);
+        var perHi = (hi / totalTxns).toFixed(2);
+        document.getElementById("perTxn").textContent =
+          "Works out to roughly $" + perLo + "-$" + perHi + " per transaction (~" +
+          totalTxns.toLocaleString() + " transactions), inside the $2-$10 range practitioners quote.";
+
+        document.getElementById("estimator_inputs").value =
+          months + "mo behind, " + txns + " txn volume, " + condition + ", " +
+          accounts + " accounts, " + who + ", estimate $" + lo + "-$" + hi;
+      }
+
+      ids.forEach(function (id) {
+        document.getElementById(id).addEventListener("change", estimate);
+      });
+      estimate();
+    })();
+  </script>
+</body>
+</html>
